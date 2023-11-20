@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  <title>Daily Planner</title>
+</head>
+<body>
+  <header>
+    <h2>Daily Planner</h2>
+    <nav>
+      <a href="./settings.html"><img src="./CSS/settings (1).svg" alt=""></a>
+    </nav>
+  </header>
+  <main>
+    <section id="date"><h2 id="dateh2">Date</h2></section>
+    <section id="weather"><h2>Weather</h2>
+      <div class="search">
+        <input type="text" id="city-value" placeholder="City">
+        <button id="#search-btn">Search</button>
+      </div>
+      <div class="weather-img"><img src="./CSS/sun (1).svg" id="display-weather"></div>
+      <div class="temperature"></div>
+    </section>
+    <section id="mood-statistics"><h2>Your mood lately</h2>
+      <div id="chart">
+        <canvas id="myChart"></canvas>
+      </div>
+      <button id="refresh-button">Refresh</button>
+    </section>
+    <section id="watch"><h2></h2></section>
+    <section id="mood"><h2>How are you feeling today?</h2>
+      <li><img src="./CSS/smile.svg" alt="happy" id="happy"></li>
+      <li><img src="./CSS/meh.svg" alt="medium" id="medium"></li>
+      <li><img src="./CSS/sad.svg" alt="sad" id="sad"></li>
+    </section>
+    <section id="todo">
+      <h2>To-Do List</h2>
+      <input type="text" id="new-item">
+          <button type="submit" id="add">Add</button>
+      <ul id="item-list">
+
+      </ul>
+      <button id="delete-completed">Delete all</button>
+    </section>
+  </main>
+
+  <footer>
+  <p>Emelie Berg</p>
+
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

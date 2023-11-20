@@ -1,0 +1,419 @@
+@font-face {
+  font-family: text1;
+  src: url(./Varela_Round/VarelaRound-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  color: black;
+  font-family: "text1", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-image: linear-gradient(#7ACAF820, #7ACAF890);
+}
+
+header {
+  background-color: #46BAFC;
+  width: 100vw;
+  height: 5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h2 {
+  color: white;
+  font-size: 3.5rem;
+  padding-right: 2rem;
+}
+
+header a {
+  margin-left: 41rem;
+}
+
+header a img {
+  width: 3vw;
+  height: auto;
+}
+
+
+/*grid starts*/
+
+main {
+  margin-top: 6rem;
+  margin-bottom: 8rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+  grid-template-rows: 25vh auto 25vh 25vh 25vh auto 25vh;
+  grid-gap: 3rem;
+  grid-template-areas: ". date weather mood ." ". date weather mood ." ". watch watch moodstats ." ". watch watch moodstats ." ". todo todo todo ." ". todo todo todo .";
+}
+
+section {
+  border-radius: 1.5rem;
+  box-shadow: 0.5rem 0.8rem 0.5rem #00000030;
+  text-align: center;
+}
+
+section h2 {
+  background-color: #46BAFC;
+  color: white;
+  padding: 1rem;
+}
+
+/*grid areas*/
+
+
+#date {
+  grid-area: date;
+  background-color: #46BAFC;
+  color: white;
+  font-size: 5rem;
+  line-height: 7rem;
+  display: flex;
+  align-items: center;
+}
+
+#weather {
+  grid-area: weather;
+  background-image: linear-gradient(#7ACAF820, #7ACAF890);
+
+}
+
+#weather button {
+  background-color: #46BAFC;
+  color: white;
+  font-size: 1rem;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-color:#46BAFC
+}
+
+#weather button:hover {
+  background-color: #46b9fcc5;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+#weather button:active {
+  background-color: #3db7fd;
+  font-size: 1rem;
+}
+
+#weather input {
+  border-color: #46BAFC;
+  border-style: solid;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+#weather input:focus {
+  outline: none;
+}
+
+.weather-img img {
+  width: 10vw;
+  height: auto;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.temperature {
+  font-size: 3rem;
+}
+
+#mood-statistics {
+  grid-area: moodstats;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+#chart {
+  margin-top: 1rem;
+}
+
+#refresh-button {
+  align-self: center;
+  margin-top: -11rem;
+  font-size: 2rem;
+  background-color: #46BAFC;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: none;
+}
+
+#refresh-button:hover {
+  font-size: 2.2rem;
+  cursor: pointer;
+  background-color: #52bffd;
+}
+
+#refresh-button:active {
+  background-color: #3db7fd;
+  font-size: 2rem;
+}
+
+#todo {
+  grid-area: todo;
+  background-color: white;
+  font-size: 2rem;
+}
+
+#todo input {
+  border-color: #46BAFC;
+  border-style: solid;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+#todo input:focus {
+  outline: none;
+}
+
+#todo ul {
+  margin: 1.2rem;
+}
+
+
+#todo li:hover {
+  cursor: pointer;
+}
+
+#todo .completed {
+  text-decoration: line-through;
+}
+
+#todo button {
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  background-color: #46BAFC;
+  color: white;
+  border-color: white;
+  border-style: solid;
+}
+
+#todo button:hover {
+  background-color: #46b9fcc5;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+#todo button:active {
+  background-color: #3db7fd;
+  font-size: 1.5rem;
+}
+
+#todo #delete-completed {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+#todo #delete-completed:hover {
+  background-color: #46b9fcc5;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+#todo #delete-completed:active {
+  background-color: #3db7fd;
+  font-size: 1.5rem;
+}
+
+#mood {
+  grid-area: mood;
+  background-color: white;
+  display: flexbox;
+}
+
+#mood li {
+  list-style: none;
+}
+
+#mood img {
+  width: 5vw;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#mood img:hover {
+  width: 5.3vw
+}
+
+#mood img:active {
+  width: 4.8vw
+}
+
+#watch {
+  grid-area: watch;
+  background-color: white;
+  color: #46BAFC;
+  font-size: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: #46BAFC;
+  border-style: solid;
+  border-width: 0.8rem;
+}
+
+#watch h2 {
+  background-color: white;
+}
+
+/*grid ends*/
+
+
+footer {
+  background-color: #46BAFC;
+  text-align: center;
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+footer p {
+  color: white;
+}
+
+
+/*media queries*/
+
+@media (max-width: 700px){
+
+  header h2 {
+    font-size: 2rem;
+    padding-right: 0;
+  }
+  header a {
+    margin-left: 5rem;
+  }
+
+  header a img {
+    width: 8vw;
+    height: auto;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50vh auto auto auto 50vh auto;
+    grid-template-areas: "date" "weather" "moodstats" "mood" "watch" "todo";
+  }
+
+  #todo {
+    margin-bottom: 2rem;
+  }
+
+  #date {
+    font-size: 6rem;
+  }
+
+  #watch {
+    font-size: 5rem;
+  }
+
+  .weather-img img {
+    width: 35vw;
+    height: auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .temperature {
+    margin-bottom: 1rem;
+  }
+
+  #weather h2 {
+    display: none;
+  }
+
+  #mood img {
+    width: 20vw;
+
+  }
+
+  #mood img:hover {
+    width: 20.5vw
+  }
+
+  #mood img:active {
+    width: 18vw
+  }
+
+  #chart {
+    margin-bottom: 2rem;
+  }
+
+}
+
+@media (min-width: 700px) and (max-width: 1200px) {
+  header h2 {
+    font-size: 4rem;
+    padding-right: 0;
+  }
+  header a {
+    margin-left: 5rem;
+  }
+
+  header a img {
+    width: 6vw;
+    height: auto;
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 50vh auto;
+    grid-template-areas: "date weather" "mood moodstats" "watch watch" "todo todo";
+    font-size: 1.5rem;
+  }
+  #todo {
+    margin-bottom: 2rem;
+  }
+
+  #date {
+    font-size: 6rem;
+  }
+
+  #mood img {
+    width: 15vw;
+
+  }
+
+  #mood img:hover {
+    width: 16vw
+  }
+
+  #mood img:active {
+    width: 14vw
+  }
+
+  .weather-img img {
+    width: 30vw;
+    height: auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .temperature {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  #chart {
+    margin-top: 8rem;
+  }
+}
