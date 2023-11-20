@@ -310,7 +310,7 @@ footer p {
 
   main {
     grid-template-columns: 1fr;
-    grid-template-rows: 50vh auto auto auto auto auto;
+    grid-template-rows: 50vh auto auto 50vh auto auto;
     grid-template-areas: "date" "weather" "mood" "moodstats" "watch" "todo";
   }
 
@@ -356,7 +356,6 @@ footer p {
 
   #chart {
     margin-bottom: 2rem;
-    margin-top: 2rem;
   }
 
 
