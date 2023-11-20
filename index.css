@@ -311,7 +311,7 @@ footer p {
   main {
     grid-template-columns: 1fr;
     grid-template-rows: 50vh auto auto auto 50vh auto;
-    grid-template-areas: "date" "weather" "moodstats" "mood" "watch" "todo";
+    grid-template-areas: "date" "weather" "mood" "moodstats" "watch" "todo";
   }
 
   #todo {
