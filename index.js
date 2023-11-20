@@ -86,7 +86,7 @@ async function search(city) {
 
   console.log(weatherData)
 
-  document.querySelector('.temperature').innerHTML = `${weatherData.main.temp}°C`
+  document.querySelector('.temperature').innerHTML = `${weatherData.main.toFixed(temp)}°C`
   if(weatherData.weather[0].main === 'Drizzle') {
     weatherImg.src = "./CSS/water.svg"
   } if(weatherData.weather[0].main === 'Clouds' && weatherData.weather[0].description === 'few clouds: 11-25%') {
